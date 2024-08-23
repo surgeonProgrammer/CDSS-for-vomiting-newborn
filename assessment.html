@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  
+</head>
+<body class='bg-[#FBF1EF] flex flex-col justify-center items-center my-[80px] md:my-[120px]'>
+  <div class='text-3xl font-bold text-center'>
+    <h1>Clinical Decision Support System for the vomiting newborn</h1>
+  </div>
+
+<div class='grid grid-rows-2 grid-cols-2  md:grid-cols-4 mt-[50px] md:mt-[100px] gap-4   place-items-center mb-0'>
+      <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500' >
+        <label class='text-[14px] font-semibold' for='gestational age'>When did the vomiting start (in days)</label>
+        <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[10px] m-auto w-full' id='onsetOfVomiting' type='number' min='0' max='46' />
+      </div>
+      <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500'>
+        <label class='text-[14px] font-semibold' for='colourOfVomitus'>What is the colour of the vomitus?</label>
+        <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[10px] m-auto w-full px-[10px] text-[13px] h-[30px]' id='colourOfVomitus' type='number' min='0' max='46' >
+        <option value=''></option> 
+        <option value='male'>greenish</option> <option value='yellowish'>yellowish</option> 
+        <option value='clear'>clear</option> 
+        <option value='blood stained'>blood stained</option> 
+        <option value='bloody'>bloody</option> 
+        </select> 
+      </div>
+      <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[200px] md:h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500 '>
+        <label class='text-[14px] font-semibold' for='colourOfVomitus'>Does the baby have abdominal distension?</label>
+        <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[20px] m-auto w-full px-[10px] text-[15px] h-[30px]' id='abdominalDistension' type='number' min='0' max='46' >
+          <option value=''></option> 
+          <option value='Yes'>Yes</option> <option value='No'>No</option> 
+          
+          </select> 
+      </div>
+      <div  class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] 
+        border-[5px] border-white        shadow-lg   p-4 text-center hover:scale-y-110 transition-transform duration-500'>
+        <label class='text-[14px] font-semibold' for='colourOfVomitus'>Is the baby passing stool?</label>
+        <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[35px] m-auto w-full px-[10px] text-[15px] h-[30px]' id='passageOfStool' type='number' min='0' max='46' >
+          <option value=''></option> 
+          <option value='Yes'>Yes</option> <option value='No'>No</option> 
+        </select> 
+
+      </div>
+      </div>
+
+      <div class='mt-[40px] flex gap-28 md:mt-[-40px]'>
+    
+        <a href='index.html'  class= ' bg-pink-400 px-[25px] py-[10px] rounded-[10px] border-[5px] border-white shadow-lg font-semibold text-white text-[20px] hover:bg-[#C2E4EE] transition-transform duration-500' > <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
+  
+        </a>
+
+        <a href='investigations.html'  class= ' bg-pink-400 px-[25px] py-[10px] rounded-[10px] border-[5px] border-white shadow-lg font-semibold text-white text-[20px] hover:bg-[#C2E4EE] transition-transform duration-500' >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+  
+        </a>
+
+        
+  <!-- <div id="popup1" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
+   
+    <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
+    <h2 id ='title' class=" text-lg font-bold mb-2 text-center">The baby in your care may have malrotation or intestinal atresia</h2>
+    <p id= 'message' class=" message text-gray-600 mb-[30px] text-center">Kindly do the following and refer the baby to a tertiary care facility. <br>
+    1. Keep the baby nil per os <br>
+    2. Pass a nasogastric tube (at least a size 8) <br>
+    3. Start IV 10% Dextrose if the baby is within day 1 of life or IV 1/5 NS in 10% Dextrose if the baby is older than a day; at 4ml/kg/hr <br>
+    4. Start broad spectrum antibiotics appropriate for age and weight <br>
+    5. Call the nearest facility with a paediatric surgeon and refer the baby</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup1()">Close</button>
+  </div>
+  </div>
+
+  <div id="popup2" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
+
+  <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
+    <h2 class="text-lg font-bold mb-2 text-center">The baby in your care may have malrotation</h2>
+    <p class="text-gray-600 mb-[30px] text-center">Kindly refer to the Korle-Bu Teaching Hospital, 37 Military Hospital, Ridge Hospital, Komfo Anokye Teaching Hospital</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup2()">Close</button>
+ </div>
+  </div> -->
+      
+    </div>
+
+
+
+
+<script src='script.js'></script>
+</body>
+</html>
