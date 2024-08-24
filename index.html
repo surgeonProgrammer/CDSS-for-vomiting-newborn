@@ -37,8 +37,8 @@
 
 
   <div class='grid grid-rows-2 grid-cols-2  md:grid-cols-4 mt-[30px] md:mt-[50px] gap-4   place-items-center mb-0 '>
-    <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500' >
-      <label class='text-[14px] font-semibold' for='onsetOfVomiting'>When did the vomiting start (in days)</label>
+    <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-3 text-center hover:scale-y-110 transition-transform duration-500' >
+      <label class='text-[14px] font-semibold' for='onsetOfVomiting'>Baby's age at onset of vomiting (days)</label>
       <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[10px] m-auto w-full' id='onsetOfVomiting' type='number' min='0' max='46' />
     </div>
     <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500'>
@@ -99,7 +99,7 @@
 </div>
     
 
-<div id="popup1" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
+<div id="popup1" class="fixed inset-0 z-50 hidden w-[400px] h-[30vh] m-auto">
    
   <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
   <h2 id ='title' class=" text-lg font-bold mb-2 text-center">The baby in your care may have malrotation or intestinal atresia</h2>
@@ -108,7 +108,8 @@
   2. Pass a nasogastric tube (at least a size 8) <br>
   3. Start IV 10% Dextrose if the baby is within day 1 of life or IV 1/5 NS in 10% Dextrose if the baby is older than a day; at 4ml/kg/hr <br>
   4. Start broad spectrum antibiotics appropriate for age and weight <br>
-  5. Call the nearest facility with a paediatric surgeon and refer the baby</p>
+  5. Call the nearest facility with a paediatric surgeon and refer the baby <br>
+  You can contact the Korle-Bu Teaching Hospital Paediatric ER on 0501567104</p>
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup1()">Close</button>
 </div>
 </div>
@@ -116,11 +117,47 @@
 <div id="popup2" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
 
 <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
-  <h2 class="text-lg font-bold mb-2 text-center">The baby in your care may have malrotation</h2>
-  <p class="text-gray-600 mb-[30px] text-center">Kindly refer to the Korle-Bu Teaching Hospital, 37 Military Hospital, Ridge Hospital, Komfo Anokye Teaching Hospital</p>
+  <h2 class="text-lg font-bold mb-2 text-center">The baby in your care may have neonatal intestinal obstruction</h2>
+  <p class="text-gray-600 mb-[30px] text-center">Kindly do the following and refer the baby to a tertiary care facility. <br>
+    1. Keep the baby nil per os <br>
+    2. Pass a nasogastric tube (at least a size 8) <br>
+    3. Start IV 10% Dextrose if the baby is within day 1 of life or IV 1/5 NS in 10% Dextrose if the baby is older than a day; at 4ml/kg/hr <br>
+    4. Start broad spectrum antibiotics appropriate for age and weight <br>
+    5. Call the nearest facility with a paediatric surgeon and refer the baby <br>
+  You can contact the Korle-Bu Teaching Hospital Paediatric ER on 0501567104 </p></p>
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup2()">Close</button>
 </div>
 </div>
+
+<div  id="popup3" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto ">
+
+  <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
+    <h2 class="text-lg font-bold mb-2 text-center">The baby in your care may have Hirschsprung disease</h2>
+    <p class="text-gray-600 mb-[30px] text-center">Kindly do the following and refer the baby to a tertiary care facility. <br>
+      1. Keep the baby nil per os <br>
+      2. Pass a nasogastric tube (at least a size 8) <br>
+      3. Start IV 10% Dextrose if the baby is within day 1 of life or IV 1/5 NS in 10% Dextrose if the baby is older than a day; at 4ml/kg/hr <br>
+      4. Start broad spectrum antibiotics appropriate for age and weight <br>
+      5. Call the nearest facility with a paediatric surgeon and refer the baby <br>
+      You can contact the Korle-Bu Teaching Hospital Paediatric ER on 0501567104</p></p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup3()">Close</button>
+  </div>
+  </div>
+
+  <div  id="popup4" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto ">
+
+    <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
+      <h2 class="text-lg font-bold mb-2 text-center">The baby in your care may have Hypertrophic Pyloric Stenosis</h2>
+      <p class="text-gray-600 mb-[30px] text-center">Kindly do the following and refer the baby to a tertiary care facility. <br>
+        1. Keep the baby nil per os <br>
+        2. Pass a nasogastric tube (at least a size 8) <br>
+        3. Start IV 10% Dextrose if the baby is within day 1 of life or IV 1/5 NS in 10% Dextrose if the baby is older than a day; at 4ml/kg/hr <br>
+        
+        4. Call the nearest facility with a paediatric surgeon and refer the baby <br>
+        You can contact the Korle-Bu Teaching Hospital Paediatric ER on 0501567104</p></p>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup4()">Close</button>
+    </div>
+    </div>
 
     
   </div>
