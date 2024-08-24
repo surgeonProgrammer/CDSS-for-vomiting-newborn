@@ -8,47 +8,98 @@
 
   
 </head>
-<body class='bg-[#FBF1EF] flex flex-col justify-center items-center my-[80px] md:my-[170px]'>
+<body class='bg-[#FBF1EF] flex flex-col justify-center items-center my-[80px]'>
   <div class='text-3xl font-bold text-center'>
     <h1>Clinical Decision Support System for the vomiting newborn</h1>
   </div>
 
   <div>
-    <div class='flex flex-col md:flex-row mt-[50px]  space-y-5 md:space-x-5 md:space-y-0 mb-0 md:mt-[100px]'>
+    <div class='flex flex-col md:flex-row mt-[40px]  space-y-5 md:space-x-5 md:space-y-0 mb-0 md:mt-[70px]'>
       <div class='bg-[#C2E4EE] p-[20px] w-[300px] h-[100px] rounded-[10px] border-[5px] border-white shadow-lg flex items-center justify-center hover:translate-y-[-20px] transition-transform duration-500' >
       <label class='text-xl pr-4 font-semibold' for='age'>Age in days</label>
       <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md' id='age' type='number' min='0' max='30' />
      </div>
      <div class='bg-[#FEE3A0] p-[20px] w-[300px] h-[100px] rounded-[10px] border-[5px] border-white shadow-lg flex items-center justify-center hover:translate-y-[-20px] transition-transform duration-500'>
       <label class='text-xl pr-4 font-semibold' for='gestational age'>Gestational age in weeks</label>
-      <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md' id='gestational age' type='number' min='0' max='47' />
+      <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md' id='gestationalAge' type='number' min='0' max='48' />
      </div>
      <div class='bg-[#D6CFF0] p-[20px] w-[300px] h-[100px] rounded-[10px] border-[5px] border-white shadow-lg flex items-center justify-center hover:translate-y-[-20px] transition-transform duration-500'>
       <label class='text-xl pr-4 font-semibold' for = 'sex'>Sex</label> 
       <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md text-[15px] px-[10px] h-[30px]' id='sex'>
         <option value=''></option>  
-        <option value='male'>Male</option> 
-        <option value='female'>Female</option>
+        <option value='Male'>Male</option> 
+        <option value='Female'>Female</option>
        </select> 
       </div> 
     </div>
 
   </div>
 
-  <div class='mt-[40px] flex gap-28'>
-    
-   
 
-    <a href='assessment.html'  class= ' bg-pink-400 px-[25px] py-[10px] rounded-[10px] border-[5px] border-white shadow-lg font-semibold text-white text-[20px] hover:bg-[#C2E4EE] transition-transform duration-500 md:mt-[80px]' >
-      
-      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+  <div class='grid grid-rows-2 grid-cols-2  md:grid-cols-4 mt-[30px] md:mt-[50px] gap-4   place-items-center mb-0 '>
+    <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500' >
+      <label class='text-[14px] font-semibold' for='onsetOfVomiting'>When did the vomiting start (in days)</label>
+      <input class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[10px] m-auto w-full' id='onsetOfVomiting' type='number' min='0' max='46' />
+    </div>
+    <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500'>
+      <label class='text-[14px] font-semibold' for='colourOfVomitus'>What is the colour of the vomitus?</label>
+      <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[10px] m-auto w-full px-[10px] text-[13px] h-[30px]' id='colourOfVomitus'>
+      <option value=''></option> 
+      <option value='greenish'>greenish</option> 
+      <option value='yellowish'>yellowish</option> 
+      <option value='clear'>clear</option> 
+      <option value='blood stained'>blood stained</option> 
+      <option value='bloody'>bloody</option> 
+      </select> 
+    </div>
+    <div class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[200px] md:h-[150px] rounded-[10px] border-[5px] border-white shadow-lg p-4 text-center hover:scale-y-110 transition-transform duration-500 '>
+      <label class='text-[14px] font-semibold' for='abdominalDistension'>Does the baby have abdominal distension?</label>
+      <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[20px] m-auto w-full px-[10px] text-[15px] h-[30px]' id='abdominalDistension'>
+        <option value=''></option> 
+        <option value='Yes'>Yes</option> <option value='No'>No</option> 
+        
+        </select> 
+    </div>
+    <div  class='bg-[#BEE9D6] w-[140px] md:w-[200px] h-[150px] rounded-[10px] 
+      border-[5px] border-white        shadow-lg   p-4 text-center hover:scale-y-110 transition-transform duration-500'>
+      <label class='text-[14px] font-semibold' for='colourOfVomitus'>Is the baby passing stool?</label>
+      <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md block mt-[35px] m-auto w-full px-[10px] text-[15px] h-[30px]' id='passageOfStool' >
+        <option value=''></option> 
+        <option value='Yes'>Yes</option> <option value='No'>No</option> 
+      </select> 
 
-    </a>
-  
+    </div>
+    </div>
+
+
+<div>
+
+ <div class='bg-[#edd1bb] p-[20px] w-[300px] h-[300px] rounded-[20px] border-[5px] border-white shadow-lg flex flex-col items-center justify-center hover:translate-y-[-20px] transition-transform duration-500 mt-[50px] md:mt-[-100px]'>
+  <label class='text-xl pr-4 font-semibold text-center py-[15px] my-[20px]' for = 'xrayFindings'>what are the x-ray findings</label> 
+  <select class='rounded-md border-[4px] border-[#FBF1EF] shadow-md text-[15px] px-[10px] h-[30px]' id='xrayFindings'>
+    <option value=''></option>  
+    <option value='No xray done'>No xray done</option> 
+    <option value='Normal X-ray'>Normal X-ray</option>
+    <option value='Double-bubble sign'>Double-bubble sign</option>
+    <option value='Triple-bubble sign'>Triple-bubble sign</option>
+    <option value='Distended loops of bowel'>Distended loops of bowel</option>
+    <option value='Not sure of findings'>Not sure of findings</option>
+    <option value='pneumoperitoneum'>pneumoperitoneum</option>
+   </select> 
+  </div> 
+</div>
+
+</div>
+ 
+ </div>
+
+ <div class='mt-[40px] flex flex-col items-center justify-center  '>
+  <button class='bg-pink-400 p-[10px] w-[200px] h-[70px] rounded-[10px] border-[5px] border-white shadow-lg font-semibold text-white text-[20px] hover:bg-[#C2E4EE] hover:text-slate-600' id='submit'>
+    Submit</button>
 </div>
     
 
-<!-- <div id="popup1" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
+<div id="popup1" class="fixed inset-0 z-50 hidden w-[400px] h-[50vh] m-auto">
    
   <div class="popup-content bg-[#FEE3A0] rounded-lg shadow-lg p-4 flex flex-col justify-center items-center">
   <h2 id ='title' class=" text-lg font-bold mb-2 text-center">The baby in your care may have malrotation or intestinal atresia</h2>
@@ -69,7 +120,7 @@
   <p class="text-gray-600 mb-[30px] text-center">Kindly refer to the Korle-Bu Teaching Hospital, 37 Military Hospital, Ridge Hospital, Komfo Anokye Teaching Hospital</p>
   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="closePopup2()">Close</button>
 </div>
-</div> -->
+</div>
 
     
   </div>

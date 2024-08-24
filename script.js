@@ -1,7 +1,7 @@
 
 
 const ageOfNeonate = document.getElementById('age');  
-const gestationalAge = document.getElementById('gestational age');
+const gestationalAge = document.getElementById('gestationalAge');
 const sex = document.getElementById('sex');
 const onsetOfVomiting = document.getElementById('onsetOfVomiting');
 const colourOfVomitus = document.getElementById('colourOfVomitus');
@@ -9,6 +9,9 @@ const abdominalDistension = document.getElementById('abdominalDistension');
 const passageOfStool = document.getElementById('passageOfStool');
 const xrayFindings = document.getElementById('xrayFindings');
 const submit = document.getElementById('submit');
+
+
+
 
 submit.addEventListener('click', vomit);
 
@@ -18,7 +21,7 @@ submit.addEventListener('click', vomit);
 function openPopup1() {
   const popup1 = document.getElementById('popup1');
   popup1.classList.remove('hidden');
-  // const popupmessage = document.getElementById('popupmessage');
+  const popupmessage = document.getElementById('popupmessage');
 }
 
 
@@ -36,15 +39,24 @@ function closePopup2() {
   popup2.classList.add('hidden');
 }
 
-function vomit(){
-  if (ageOfNeonate.value >=0 && gestationalAge.value >=37 && (sex.value === 'male' || sex.value === 'female') && onsetOfVomiting.value >= 0 && colourOfVomitus.value === 'greenish' && abdominalDistension.value === 'No' && passageOfStool.value === 'Yes' && xrayFindings.value === 'normalXRay'){ 
-    openPopup1();
-  } 
-  else if (ageOfNeonate.value >=0 && gestationalAge.value >=37 && sex.value === 'male' || sex.value === 'female' && onsetOfVomiting.value >= 0 && colourOfVomitus.value === 'greenish' && abdominalDistension.value === 'Yes' && passageOfStool.value === 'Yes' && xrayFindings.value === 'normalXRay'){
-    openPopup1();
+// Function to save input values to localStorage
 
-  }
-  else {
+function vomit() {
+  if (
+    parseInt(ageOfNeonate.value) >= 0 &&
+    parseInt(gestationalAge.value) >= 37 &&
+    (sex.value === 'Male' || sex.value === 'Female') &&
+    parseInt(onsetOfVomiting.value) >= 0 &&
+    colourOfVomitus.value === 'greenish' &&
+    abdominalDistension.value === 'No' &&
+    passageOfStool.value === 'Yes' &&
+    xrayFindings.value === 'Normal X-ray')  {
+      openPopup1();
+    }
+
+    else if( xrayFindings.value === 'Double-bubble sign'){openPopup1();}
+   else {
     openPopup2();
   }
 }
+
